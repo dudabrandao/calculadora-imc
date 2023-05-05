@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    /*tirar margem*/
+    padding: 0px;
+    /*tirar espaçamento*/
+    transition: all 1s;
+    /*todos os meus componentes terão transição*/
+    font-family: 'Roboto', sans-serif;
+    /*mudar fonte*/
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #8EDDBE;
+}
+
+header img{
+    width: 350px;
+}
+
+main{
+    background-color: f5f5f5;
+}
+
+main h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #158672;
+}
+
+main .dados{
+    text-align: center;
+}
+
+main .dados button{
+    margin-top: 15px;
+    color: #ffff;
+    padding: 7px;
+    background-color: #158672;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.dados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

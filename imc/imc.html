@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="imc.css">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="img/Calculadora de imc.png" alt="">
+        </figure>
+    </header>
+    <main>
+        <h2>Calcule seu IMC(Índice de Massa Corporal):</h2>
+        <div class="dados">
+            <form action="" id="formulario" class="pesoEalt">
+                <label for="peso">Informe seu Peso:</label>
+                <input type="text" name="Peso" id="peso">
+
+                <label for="altura">Informe sua Altura:</label>
+                <input type="text" name="Altura" id="altura">
+
+                <button type="submit" class="enviar">Calcular IMC</button>
+            </form>
+        </div>
+
+    </main>
+
+    <script>
+        var formulario = document.getElementById("formulario")
+        function enviarForm(event) {
+            event.preventDefault()
+            var dados = new FormData(this)
+            var peso = dados.get("peso")
+            var altura = dados.get("altura")
+            var alt = altura * altura
+            var imc = peso / alt
+
+            if (imc <= 18.5) {
+                alert("Magreza")
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                alert("Normal")
+            } else if (imc >= 25.0 && imc <= 29.9) {
+                alert("Sobrepeso")
+            } else if (imc >= 30.0 && imc <= 39.9) {
+                alert("Obesidade")
+            } else if (imc >= 40) {
+                alert("Obesidade Grave")
+            }
+
+        }
+        formulario.addEventListener("submit", enviarForm)
+    </script>
+</body>
+</html>
